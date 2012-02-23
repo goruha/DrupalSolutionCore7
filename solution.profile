@@ -1,8 +1,5 @@
 <?php
 
-
-define('SOLUTION_TASK_DRAKE_RUN', 'drake.run');
-
 /**
  * Return an array of the modules to be enabled when this profile is installed.
  *
@@ -38,10 +35,6 @@ function solution_profile_details() {
  *   task list.
  */
 function solution_profile_task_list() {
-  $tasks = array(
-    SOLUTION_TASK_DRAKE_RUN => t('Run drush migrate')
-  );
-  return $tasks;
 }
 
 /**
@@ -96,12 +89,6 @@ function solution_profile_task_list() {
  *   modify the $task, otherwise discarded.
  */
 function solution_profile_tasks(&$task, $url) {
-  if ('profile' == $task) {
-    $task = SOLUTION_TASK_DRAKE_RUN;
-    $form['test']=array('#value' => 'dsadasda');
-    return $form;
-  }
-  elseif (SOLUTION_TASK_DRAKE_RUN == $task) {
     module_load_include('drush.inc', 'drush_migrate', 'drake');
     drush_drake();
     // Don't display date and author information for page nodes by default.
@@ -112,11 +99,6 @@ function solution_profile_tasks(&$task, $url) {
     // Update the menu router information.
     menu_rebuild();
     $task = 'profile-finalization';
-    $form['test']=array('#value' => 'dsadasda222');
-    return $form;
-  }
-  else {
-  }
 }
 
 /**
