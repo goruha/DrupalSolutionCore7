@@ -1,5 +1,8 @@
 <?php
 
+
+define('SOLUTION_TASK_DRAKE_RUN', 'drake.run');
+
 /**
  * Return an array of the modules to be enabled when this profile is installed.
  *
@@ -7,7 +10,7 @@
  *   An array of modules to enable.
  */
 function solution_profile_modules() {
-  return array('drush_migrate', 'color', 'comment', 'help', 'menu', 'taxonomy', 'dblog');
+  return array('drush_migrate', 'menu', 'taxonomy', 'dblog');
 }
 
 /**
@@ -35,6 +38,10 @@ function solution_profile_details() {
  *   task list.
  */
 function solution_profile_task_list() {
+  $tasks = array(
+    SOLUTION_TASK_DRAKE_RUN => t('Run drush migrate')
+  );
+  return $tasks;
 }
 
 /**
@@ -89,14 +96,27 @@ function solution_profile_task_list() {
  *   modify the $task, otherwise discarded.
  */
 function solution_profile_tasks(&$task, $url) {
+  if ('profile' == $task) {
+    $task = SOLUTION_TASK_DRAKE_RUN;
+    $form['test']=array('#value' => 'dsadasda');
+    return $form;
+  }
+  elseif (SOLUTION_TASK_DRAKE_RUN == $task) {
+    module_load_include('drush.inc', 'drush_migrate', 'drake');
+    drush_drake();
+    // Don't display date and author information for page nodes by default.
+    $theme_settings = variable_get('theme_settings', array());
+    $theme_settings['toggle_node_info_page'] = FALSE;
+    variable_set('theme_settings', $theme_settings);
 
-  // Don't display date and author information for page nodes by default.
-  $theme_settings = variable_get('theme_settings', array());
-  $theme_settings['toggle_node_info_page'] = FALSE;
-  variable_set('theme_settings', $theme_settings);
-
-  // Update the menu router information.
-  menu_rebuild();
+    // Update the menu router information.
+    menu_rebuild();
+    $task = 'profile-finalization';
+    $form['test']=array('#value' => 'dsadasda222');
+    return $form;
+  }
+  else {
+  }
 }
 
 /**
