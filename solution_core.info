@@ -15,5 +15,6 @@ dependencies[] = toolbar
 dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
-;dependencies[] = drush_migrate
+dependencies[] = drush_drake
+dependencies[] = solution
 files[] = solution_core.profile
