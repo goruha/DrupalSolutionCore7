@@ -7,4 +7,4 @@ projects[drush_drake][download][url] = https://github.com/georgwaechter/drush_mi
 
 projects[solution][type] = module
 projects[solution][download][type] = git
-projects[solution][download][url] = git@github.com:goruha/DrupalSolution7.git
+projects[solution][download][url] = git://github.com/goruha/DrupalSolution7.git
