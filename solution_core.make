@@ -12,3 +12,5 @@ projects[solution][download][url] = git://github.com/goruha/DrupalSolution7.git
 projects[]=features
 projects[]=ctools
 projects[]=strongarm
+projects[]=devel
+projects[]=diff
