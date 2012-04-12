@@ -23,7 +23,7 @@ function solution_core_profile_modules() {
     'strongarm',
     'devel',
     'diff',
-    'environment',
+    'environment'
   );
   return $modules;
 }
