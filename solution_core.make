@@ -14,3 +14,5 @@ projects[]=ctools
 projects[]=strongarm
 projects[]=devel
 projects[]=diff
+
+projects[environment][version]="1.x-dev"
