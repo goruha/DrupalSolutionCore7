@@ -7,7 +7,7 @@ index 7443503..86b6abe 100644
    }
    else {
 -    $code['module'] = "<?php\n/**\n * @file\n */\n\n// Drupal needs this blank file.\n";
-+    $code['module'] = "<?php\n/**\n * @file\nDrupal needs this blank file.\n*/\n";
++    $code['module'] = "<?php\n/**\n * @file\n * Drupal needs this blank file.\n */\n";
    }
    return $code;
  }
