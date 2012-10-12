@@ -1,0 +1,13 @@
+diff --git a/js/auto-submit.js b/js/auto-submit.js
+index bc5a58e..18a78d7 100644
+--- a/js/auto-submit.js
++++ b/js/auto-submit.js
+@@ -43,7 +43,7 @@ Drupal.behaviors.CToolsAutoSubmit = {
+       .change(function (e) {
+         // don't trigger on text change for full-form
+         if ($(e.target).is(':not(:text, :submit)')) {
+-          triggerSubmit.call(e.target.form);
++          setTimeout($.proxy(triggerSubmit, e.target.form), 1);
+         }
+       });
+ 
