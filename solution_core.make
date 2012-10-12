@@ -13,7 +13,7 @@ projects[solution][download][url] = git://github.com/goruha/DrupalSolution7.git
 ;projects[features][patch][] = "patches/features/features_empty_drupal_codestyle.patch"
 ;http://drupal.org/node/1811032
 projects[ctools][version]="1.2"
-projects[ctools][patch][] = "patches/features/features_empty_drupal_codestyle.patch"
+projects[ctools][patch][] = "patches/ctools/auto_submit_timeout.patch"
 projects[]=strongarm
 projects[]=devel
 projects[]=diff
