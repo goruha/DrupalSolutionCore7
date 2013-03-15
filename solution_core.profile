@@ -15,14 +15,6 @@ function solution_core_profile_modules() {
   $modules = array(
     'drush_migrate',
     'solution',
-    'menu',
-    'taxonomy',
-    'dblog',
-    'features',
-    'ctools',
-    'strongarm',
-    'devel',
-    'diff',
     'environment'
   );
   return $modules;
