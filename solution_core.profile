@@ -11,7 +11,7 @@
  * @return array
  *   An array of modules to enable.
  */
-function solution_core_profile_modules() {
+/*function solution_core_profile_modules() {
   $modules = array(
     'block',
     'drush_migrate',
@@ -19,7 +19,7 @@ function solution_core_profile_modules() {
     'environment'
   );
   return $modules;
-}
+}*/
 
 /**
  * Implements hook_form_FORM_ID_alter().
