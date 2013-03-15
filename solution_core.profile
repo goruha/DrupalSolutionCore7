@@ -13,6 +13,7 @@
  */
 function solution_core_profile_modules() {
   $modules = array(
+    'block',
     'drush_migrate',
     'solution',
     'environment'

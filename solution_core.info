@@ -2,6 +2,7 @@ name = DrupalSolution
 description = Drupal Solution profile.
 version = VERSION
 core = 7.x
+dependencies[] = block
 dependencies[] = drush_drake
 dependencies[] = environment
 dependencies[] = solution
