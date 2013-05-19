@@ -13,5 +13,5 @@ projects[solution][download][tag] = 2.0
 
 projects[environment][download][type] = "git"
 projects[environment][download][url] = git://git.drupal.org/project/environment.git
-projects[environment][download][revision] = 8c4fa29f126961b7332a1f85738475250ca7b6d8
+projects[environment][download][revision] = 6587eb6cf125a3393cbd68d11200b94948df2dbb
 projects[environment][patch][] = "http://drupal.org/files/drush_same_environment_notice.patch"
